@@ -1,5 +1,6 @@
 package com.cydeo.spring08mvcmodal;
 
+import com.cydeo.model.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +34,8 @@ List<Integer> numbers = new ArrayList<>();
     LocalDate dt= LocalDate.now();
     model.addAttribute("date", dt);
 
-
+Student student= new Student(1,"Mitch", "Fules");
+model.addAttribute("student", student);
 
 return "student/welcome";
 }
